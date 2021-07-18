@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+html, body{
+  height: 100%;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  perspective-origin: 0% 50%;
+  perspective: 800px;
+  background: #21212d;
+}
+
+nav, main{
+  transition: transform 150ms ease-out;
+}
+
+nav{
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16em;
+  background-color: #ffffff;
+  transform: translateX(-16em);
+}
+
+nav.menu-active{
+  transform: translateX(0);
+}
+
+nav.menu-hover{
+  transform: translateX(-15em);
+}
+
+nav h1{
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -65px;
+  height: 60px;
+  width: 65px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #2AA7D8;
+  cursor: pointer;
+}
+
+nav h1 a{
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+}
+
+nav h1:hover{
+  color: #353441;
+  background: #d4d4d4;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+
+nav li{
+  display: inline-block;
+  padding: 0 1em;
+  width: 100%;
+  height: 60px;
+  color: #2AA7D8;
+  line-height: 60px;
+  background-color: #ffffff;
+  transition: all 0.5s ease-in;
+}
+
+nav li:nth-of-type(2n){
+  background-color: #3a3947;
+}
+
+nav li:hover{
+  background: #d4d4d4;
+  color: black;
+}
+
+main{
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transform-origin: 0% 50%;
+}
+
+main:after{
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, transparent, rgba(33, 33, 45, .5));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 150ms ease-out, visibility 0s 150ms;
+}
+
+main.menu-active{
+  border-radius: 0.001px;
+  transform: translateX(16em) rotateY(15deg);
+}
+
+main.menu-active:after{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 150ms ease-out, visibility 0s;
+}
+
+main.menu-hover{
+  border-radius: 0.001px;
+  transform: translateX(1em) rotateY(2deg);
+}
+
+main section{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width: 75%;
+  overflow: auto;
+  background-color: transparent;
+}
+
+section h1{
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+ul{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+.container{
+	width: 100%;
+	height: auto;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.box{
+	width:350px;
+	height:500px;
+	background-color:/*#1e1e26*/#ffffff;
+	border-radius: 10px;
+	box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin: 55px 10px;
+}
+
+.model{
+	height: 350px;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.details{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 320px;
+  margin-bottom: 10px;
+}
+
+.details p{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color:#6a6a74;
+	text-align: center;
+  margin-top: 10px;
+}
+
+.marvel{
+	color:#2AA7D8;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 25px;
+}
+
+.box:hover{
+	background-color: #d4d4d4;
+	transform-style: preserve-3d;
+	transform: scale(1.02);
+	transition: all ease 0.3s;
+}
+
+.box:hover .marvel{
+	color:black;
+	transition: all ease 0.5s;
+}
+
+/*--responsive for mobile phone--*/
+@media (max-width:720px){
+  section h1{
+    margin-left: 50px;
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  main section{
+    max-width: 100%;
+  }
+
+  section .container{
+      margin-top: 20px;
+  }
+
+	.box{
+    margin-left: 15px;
+		width: 94%;
+		height: 560px;
+	}
+
+	.model{
+		height:250px;
+	}
+
+	.details p{
+		font-size: 16px;
+		width: 250px;
+	}
+}

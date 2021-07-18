@@ -1,0 +1,259 @@
+html, body{
+  height: 100%;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  perspective-origin: 0% 50%;
+  perspective: 800px;
+  background: #21212d;
+}
+
+nav, main{
+  transition: transform 150ms ease-out;
+}
+
+nav{
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16em;
+  background-color: #fff;
+  transform: translateX(-16em);
+}
+
+nav.menu-active{
+  transform: translateX(0);
+}
+
+nav.menu-hover{
+  transform: translateX(-15em);
+}
+
+nav h1{
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -65px;
+  height: 60px;
+  width: 65px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+nav h1 a{
+  color: #2AA7D8;
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+}
+
+nav h1:hover{
+  color: #fff;
+  background: #d4d4d4;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+
+nav li{
+  display: inline-block;
+  padding: 0 1em;
+  width: 100%;
+  height: 60px;
+  color: #2AA7D8;
+  line-height: 60px;
+  background-color: #fff;
+  transition: all 0.5s ease-in;
+}
+
+nav li:nth-of-type(2n){
+  background-color: #fff;
+}
+
+nav li:hover{
+  background: #d4d4d4;
+  color: black;
+}
+
+main{
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transform-origin: 0% 50%;
+}
+
+main:after{
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, transparent, rgba(33, 33, 45, .5));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 150ms ease-out, visibility 0s 150ms;
+}
+
+main.menu-active{
+  border-radius: 0.001px;
+  transform: translateX(16em) rotateY(15deg);
+}
+
+main.menu-active:after{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 150ms ease-out, visibility 0s;
+}
+
+main.menu-hover{
+  border-radius: 0.001px;
+  transform: translateX(1em) rotateY(2deg);
+}
+
+main section{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  padding: 1em 4em;
+  max-width: 1000px;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+section h1{
+  text-align: center;
+  color: black;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 4em;
+}
+
+section h2{
+  text-align: center;
+  color: transparent;
+  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+  -webkit-background-clip: text;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 2em;
+  animation: animate 5s linear infinite;
+  -webkit-background-size: 500%;
+}
+
+@keyframes animate {
+  0%{
+    background-position: 0 100%;
+  }
+  50%{
+    background-position: 100% 0;
+  }
+  100%{
+    background-position: 0 100%;
+  }
+}
+
+section .arrow{
+  position: absolute;
+  margin-top: 35px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section .arrow span{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06A8FF;
+  border-right: 5px solid #06A8FF;
+  transform: rotate(45deg);
+  margin: -15px;
+  animation: scroll 2s infinite;
+}
+
+section .arrow span:nth-child(2){
+  animation-delay: -.2s;
+}
+
+section .arrow span:nth-child(3){
+  animation-delay: -.4s;
+}
+
+@keyframes scroll {
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-15px, -15px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(15px, 15px);
+  }
+}
+
+section p{
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  margin: 8px 0;
+  margin-bottom: 15px;
+  color: black;
+  font-size: 18px;
+}
+
+section .container{
+  margin-top: 13%;
+  margin-left: 35%;
+  position: relative;
+  width: 250px;
+  height: 150px;
+}
+
+section .container img{
+  position: relative;
+  width: 100%;
+  align-items: center;
+  transition: 0.5s;
+  border: 3px solid #ffffff;
+}
+
+section .container img:hover{
+  z-index: 1;
+  transform: scale(1.25);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, .5);
+}
+
+@media (max-width: 991px) {
+  section .container{
+    margin-top: 120px;
+    margin-left: 20px;
+  }
+}
