@@ -25,8 +25,6 @@ Following are the navigations for:
 For the project to work, the website and the app have to work simultaneously.
 
 <h4>Website</h2>
-Link - https://nirvisha82.github.io/ModAR---Revolutionizing-the-way-of-teaching/Home.html  
-<br />
 Website can be visited by clicking the above link. Any subtopic from the home page can be chosen to see it's 3D illustration. Please visit the website using laptop or PC for smooth functioning of the project.
 
 <h4>App</h2>
