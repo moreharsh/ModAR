@@ -24,17 +24,19 @@ Following are the navigations for:
 <h2>Steps to Install and Run the Project</h2>
 For the project to work, the website and the app have to work simultaneously.
 
-<h4>Website</h2>
+<h2>Website</h2>
 Website can be visited by clicking the above link. Any subtopic from the home page can be chosen to see it's 3D illustration. Please visit the website using laptop or PC for smooth functioning of the project.
 
-<h4>App</h2>
+<h3>App</h3>
 App can be installed with the help of the APK file which is present inside the app/ directory.  
 <br />
 The subtopic which was chosen in the website has to be chosen in the app as well, after which a scanner will get opened. On scanning the images from the website with the help of the app scanner, 3D models of images will get Augmented on them and thus will be seen through the app. A tutorial about how to use the app is also provided in the app itself. 
 
-<h2>Results</h2>
+<h3>Results</h3>
 <img src="media/Yatch.jpg" alt="My cool logo" width="200" height="400" />
 <img src="media/Skeleton.jpg" alt="My cool logo" width="200" height="400"/>
+
+<h3>GitHub Link: </h3> https://github.com/more-harsh/ModAR
 
 <h2>About the Team</h2>
 All the members of Team Inferno are students of Second Year Information Technology Department of Vishwakarma Institute of Technology, Pune.
