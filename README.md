@@ -44,3 +44,7 @@ All the members of Team Inferno are students of Second Year Information Technolo
 * Juhi Rajani
 * Nirvisha Soni
 * Dhruva Khanwelkar
+
+<br />
+<br />
+<img src="certificate/IncubateInd-Certificate.png" alt="My Certificate"/>
