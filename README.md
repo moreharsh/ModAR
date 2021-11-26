@@ -36,7 +36,7 @@ The subtopic which was chosen in the website has to be chosen in the app as well
 <img src="media/Yatch.jpg" alt="My cool logo" width="200" height="400" />
 <img src="media/Skeleton.jpg" alt="My cool logo" width="200" height="400"/>
 
-<h3>GitHub Link: </h3> <a href="https://github.com/more-harsh/ModAR"> https://github.com/more-harsh/ModAR </a>
+<h3>GitHub Link: </h3> <a href="https://github.com/moreharsh/ModAR"> https://github.com/moreharsh/ModAR </a>
 
 <h2>About the Team</h2>
 All the members of Team Inferno are students of Second Year Information Technology Department of Vishwakarma Institute of Technology, Pune.
